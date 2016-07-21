@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/fede/fromGit/Leanplum/Android/AndroidSDK/build/intermediates/res/merged/release/drawable-xxxhdpi-v4/powered_by_google_light.png",
+        "source": "/Users/fede/fromGit/Leanplum/Android/AndroidSDK/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.3.0/res/drawable-xxxhdpi/powered_by_google_light.png"
+    },
+    {
+        "merged": "/Users/fede/DEVELOPMENT/ANDROID/InProgress/Android_loginScenario/AndroidSDK/build/intermediates/res/merged/release/drawable-xxxhdpi-v4/powered_by_google_dark.png",
+        "source": "/Users/fede/DEVELOPMENT/ANDROID/InProgress/Android_loginScenario/AndroidSDK/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.3.0/res/drawable-xxxhdpi/powered_by_google_dark.png"
+    },
+    {
+        "merged": "/Users/fede/DEVELOPMENT/ANDROID/InProgress/Android_loginScenario/AndroidSDK/build/intermediates/res/merged/release/drawable-xxxhdpi-v4/powered_by_google_light.png",
+        "source": "/Users/fede/DEVELOPMENT/ANDROID/InProgress/Android_loginScenario/AndroidSDK/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.3.0/res/drawable-xxxhdpi/powered_by_google_light.png"
+    },
+    {
+        "merged": "/Users/fede/fromGit/Leanplum/Android/AndroidSDK/build/intermediates/res/merged/release/drawable-xxxhdpi-v4/powered_by_google_dark.png",
+        "source": "/Users/fede/fromGit/Leanplum/Android/AndroidSDK/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.3.0/res/drawable-xxxhdpi/powered_by_google_dark.png"
+    }
+]

@@ -28,21 +28,23 @@ public class ApplicationClass extends Application {
         super.onCreate();
 
         Leanplum.setApplicationContext(this);
+
+        LeanplumActivityHelper.enableLifecycleCallbacks(this);
+
         Parser.parseVariables(this);
         Parser.parseVariablesForClasses(AnotherActivity.class);
-        LeanplumActivityHelper.enableLifecycleCallbacks(this);
 
         Leanplum.setDeviceIdMode(LeanplumDeviceIdMode.ANDROID_ID);
         if (BuildConfig.DEBUG) {
-            Leanplum.setAppIdForDevelopmentMode("", "");
+            Leanplum.setAppIdForDevelopmentMode("app_KBA1FumxGvuftZQQanpt8qNv1eLJcLHffBF38qwVNcw", "dev_rXc2Io45NCYWFC01MhhurVhd1caBKrwKXWQXOmzzdqA");
         } else {
-            Leanplum.setAppIdForProductionMode("", "");
+            Leanplum.setAppIdForProductionMode("app_KBA1FumxGvuftZQQanpt8qNv1eLJcLHffBF38qwVNcw", "prod_JJ7oaM1zXgv0QKxIxNtauBeSD3Wa7ghdaAXWTgYp32o");
         }
 
         // Registering for Push with Leanplum
         // Here is where the SenderID is passed. In this case I'm using the Leanplum bundle SenderID,
         // no need in this case to specify any specific Google API key in the Settings in the Leanplum Dashboard.
-//        LeanplumPushService.setGcmSenderId(LeanplumPushService.LEANPLUM_SENDER_ID);
+        LeanplumPushService.setGcmSenderId(LeanplumPushService.LEANPLUM_SENDER_ID);
 
         // However, a specific SenderID (or SenderIDs) can be passed for the registration.
         // The SenderID correspond to the Google Cloud Porject number (is a 12 digits number) and needs to be passed as a string.
@@ -60,9 +62,11 @@ public class ApplicationClass extends Application {
             }
         });
 
+        Leanplum.setDeviceId("newDevice_" + System.currentTimeMillis());
+
 
         // Moving Leanplum.start(this); in MainActivity class
-//        Leanplum.start(this);
+        Leanplum.start(this);
 
     }
 }
