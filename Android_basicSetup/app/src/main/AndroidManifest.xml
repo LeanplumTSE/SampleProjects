@@ -17,6 +17,13 @@
         android:protectionLevel="signature" />
     <uses-permission android:name="com.leanplum.sample.permission.C2D_MESSAGE" />
 
+    <!-- These permissions are required only for geofencing. -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+    <!-- This permission might be used for Geofencing testing. -->
+    <!--<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION"/>-->
+
 
     <application
         android:allowBackup="true"
@@ -78,6 +85,8 @@
             </intent-filter>
         </service>
 
+        <!-- For geofencing only -->
+        <service android:name="com.leanplum.ReceiveTransitionsIntentService" />
         
     </application>
 
