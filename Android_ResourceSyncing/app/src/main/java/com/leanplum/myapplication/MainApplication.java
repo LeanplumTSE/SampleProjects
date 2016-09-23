@@ -38,20 +38,11 @@ public class MainApplication extends Application {
 //        // Registering Leanplum - Fill in your APP_ID and KEYs\
         // bResourcesSync app
         if (BuildConfig.DEBUG) {
-            Leanplum.setAppIdForDevelopmentMode("app_7HxQUnYChvwtWRfb8RhxKShL2bsomBp0wt84taAYDzE", "dev_TGYFF1AArM5gV8KKubUTTWNQYUtZRRotdTk0lVwRaNc");
+            Leanplum.setAppIdForDevelopmentMode("", "");
         } else {
-            Leanplum.setAppIdForProductionMode("app_7HxQUnYChvwtWRfb8RhxKShL2bsomBp0wt84taAYDzE", "prod_MmuePhH9KYWYQAzhY5qDOeAXTGhMZD1HmgsN79DwMqo");
+            Leanplum.setAppIdForProductionMode("", "");
         }
 
-        // Registering Leanplum - Fill in your APP_ID and KEYs
-        // fedeGoogleCloudTest
-//        if (BuildConfig.DEBUG) {
-//            Leanplum.setAppIdForDevelopmentMode("app_dcU2buIz36Im31XkmgQJyiKSb1iniJIlXyh7f2rOfWM", "dev_KnLVIkD2FSajr79bVfxF64ORa7IZFY3pkSSc1Q6g3Zc");
-//        } else {
-//            Leanplum.setAppIdForProductionMode("app_dcU2buIz36Im31XkmgQJyiKSb1iniJIlXyh7f2rOfWM", "prod_J1PTj0OHzY4rdW5Q8CJRLYkmOwzlbqsAHoWxOkw2ez4");
-//        }
-
-//        Leanplum.enableVerboseLoggingInDevelopmentMode();
 
         Leanplum.syncResourcesAsync();
 //        Leanplum.syncResourcesAsync(Arrays.asList("drawable/s.*", "drawable/p.*"), null);
