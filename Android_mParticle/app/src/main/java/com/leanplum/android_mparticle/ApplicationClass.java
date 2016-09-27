@@ -10,6 +10,7 @@ import android.util.Log;
 import com.leanplum.Leanplum;
 import com.leanplum.LeanplumPushNotificationCustomizer;
 import com.leanplum.LeanplumPushService;
+import com.leanplum.annotations.Parser;
 import com.leanplum.callbacks.StartCallback;
 import com.mparticle.MParticle;
 
@@ -44,9 +45,13 @@ public class ApplicationClass extends Application {
             }
         });
 
-        MParticle.start(this, "04780a3595efa74fbe58dca6f7161f96", "lAYFYw6LEsj7ZJIizaxfvrLvHIOo9w-0NxopiUXIqc4Gh8J2b27ffzXDeRAAVi1T");
+        // Parsing for Variable to be registered in Leanplum Dashboard
+        // This has to be done BEFORE starting Leanplum
+        // Variables are defined in this case into LPvariables class
+        Parser.parseVariablesForClasses(LPvariables.class);
 
-
+        // Starting MParticle - this will also start Leanplum
+        MParticle.start(this);
 
 
     }
