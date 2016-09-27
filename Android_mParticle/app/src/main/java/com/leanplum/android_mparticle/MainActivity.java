@@ -62,9 +62,9 @@ public class MainActivity extends AppCompatActivity {
                 MParticle.getInstance().logEvent("Mparticle tracked event - other", MParticle.EventType.Other);
                 MParticle.getInstance().logEvent("Mparticle tracked event - location", MParticle.EventType.Location);
 
+                // Tracking a Custom Event passing parameters
                 eventInfo.put("spice", "hot");
                 eventInfo.put("menu", "weekdays");
-
                 MPEvent event = new MPEvent.Builder("Food Order", MParticle.EventType.Transaction)
                         .duration(100)
                         .info(eventInfo)
