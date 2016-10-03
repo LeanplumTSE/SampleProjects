@@ -1,0 +1,21 @@
+PODS:
+  - Leanplum-iOS-SDK (1.4.0.1)
+  - mParticle-Apple-SDK (6.9.0):
+    - mParticle-Apple-SDK/mParticle (= 6.9.0)
+  - mParticle-Apple-SDK/mParticle (6.9.0)
+  - mParticle-Leanplum (6.9.0):
+    - Leanplum-iOS-SDK (= 1.4.0.1)
+    - mParticle-Apple-SDK/mParticle (~> 6.9)
+
+DEPENDENCIES:
+  - mParticle-Apple-SDK
+  - mParticle-Leanplum
+
+SPEC CHECKSUMS:
+  Leanplum-iOS-SDK: 220755449d8f39270591fe75f49e8abe6f29d934
+  mParticle-Apple-SDK: fceaf4ee8fc2722ff7f7a1daa58cb2caeecf134c
+  mParticle-Leanplum: e7019beceb36bb8641b58697aa1cdd0eac28882c
+
+PODFILE CHECKSUM: 34feab682eba64541c8e30be7f6cebcde7de68bb
+
+COCOAPODS: 1.0.1

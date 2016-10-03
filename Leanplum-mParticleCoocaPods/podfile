@@ -1,0 +1,24 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, '9.0'
+source 'https://github.com/CocoaPods/Specs.git'
+
+inhibit_all_warnings!
+
+target 'Leanplum_mParticle_CocoaPods' do
+  # Uncomment this line if you're using Swift or would like to use dynamic frameworks
+  use_frameworks!
+  pod 'mParticle-Apple-SDK'
+  pod 'mParticle-Leanplum'
+  # Pods for Leanplum_mParticle_CocoaPods
+
+  target 'Leanplum_mParticle_CocoaPodsTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'Leanplum_mParticle_CocoaPodsUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
