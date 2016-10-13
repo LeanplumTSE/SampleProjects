@@ -1,0 +1,709 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		33B454845D5884F9BA4F71BC /* Pods_Leanplum_mParticle_CocoaPodsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB158D3B7BD5C00B380AB7A7 /* Pods_Leanplum_mParticle_CocoaPodsTests.framework */; };
+		9E00320F7E3FF1E988AA47AC /* Pods_Leanplum_mParticle_CocoaPodsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D9910A767E49B890DCE2822 /* Pods_Leanplum_mParticle_CocoaPodsUITests.framework */; };
+		BC35F79E91EC1099E96F6501 /* Pods_Leanplum_mParticle_CocoaPods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A60CAB76799EA9CC4993CBE /* Pods_Leanplum_mParticle_CocoaPods.framework */; };
+		DB79DE611D99BB4000E7BF51 /* ViewControllerSecond.m in Sources */ = {isa = PBXBuildFile; fileRef = DB79DE5F1D99BB4000E7BF51 /* ViewControllerSecond.m */; };
+		DB79DE621D99BB4000E7BF51 /* ViewControllerSecond.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB79DE601D99BB4000E7BF51 /* ViewControllerSecond.xib */; };
+		DB79DF241DA2F7F300E7BF51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB79DF231DA2F7F300E7BF51 /* AppDelegate.m */; };
+		DBE069251D976DA8001370B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE069241D976DA8001370B4 /* main.m */; };
+		DBE069301D976DA8001370B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBE0692F1D976DA8001370B4 /* Assets.xcassets */; };
+		DBE069331D976DA8001370B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBE069311D976DA8001370B4 /* LaunchScreen.storyboard */; };
+		DBE0693E1D976DA9001370B4 /* Leanplum_mParticle_CocoaPodsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE0693D1D976DA9001370B4 /* Leanplum_mParticle_CocoaPodsTests.m */; };
+		DBE069491D976DA9001370B4 /* Leanplum_mParticle_CocoaPodsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE069481D976DA9001370B4 /* Leanplum_mParticle_CocoaPodsUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DBE0693A1D976DA9001370B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DBE069181D976DA8001370B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DBE0691F1D976DA8001370B4;
+			remoteInfo = Leanplum_mParticle_CocoaPods;
+		};
+		DBE069451D976DA9001370B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DBE069181D976DA8001370B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DBE0691F1D976DA8001370B4;
+			remoteInfo = Leanplum_mParticle_CocoaPods;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2CA239EBEA045185EE92F91E /* Pods-Leanplum_mParticle_CocoaPodsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Leanplum_mParticle_CocoaPodsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Leanplum_mParticle_CocoaPodsTests/Pods-Leanplum_mParticle_CocoaPodsTests.release.xcconfig"; sourceTree = "<group>"; };
+		41C5948835F7F94293E33183 /* Pods-Leanplum_mParticle_CocoaPods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Leanplum_mParticle_CocoaPods.release.xcconfig"; path = "Pods/Target Support Files/Pods-Leanplum_mParticle_CocoaPods/Pods-Leanplum_mParticle_CocoaPods.release.xcconfig"; sourceTree = "<group>"; };
+		6D9910A767E49B890DCE2822 /* Pods_Leanplum_mParticle_CocoaPodsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Leanplum_mParticle_CocoaPodsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A60CAB76799EA9CC4993CBE /* Pods_Leanplum_mParticle_CocoaPods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Leanplum_mParticle_CocoaPods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A771D89DE9E8A3C59594EC0 /* Pods-Leanplum_mParticle_CocoaPodsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Leanplum_mParticle_CocoaPodsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Leanplum_mParticle_CocoaPodsTests/Pods-Leanplum_mParticle_CocoaPodsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		947478594DB1DFBDB7F77665 /* Pods-Leanplum_mParticle_CocoaPodsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Leanplum_mParticle_CocoaPodsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Leanplum_mParticle_CocoaPodsUITests/Pods-Leanplum_mParticle_CocoaPodsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A02E475E860469516F93CAE7 /* Pods-Leanplum_mParticle_CocoaPodsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Leanplum_mParticle_CocoaPodsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Leanplum_mParticle_CocoaPodsUITests/Pods-Leanplum_mParticle_CocoaPodsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BB158D3B7BD5C00B380AB7A7 /* Pods_Leanplum_mParticle_CocoaPodsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Leanplum_mParticle_CocoaPodsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB79DE5E1D99BB4000E7BF51 /* ViewControllerSecond.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerSecond.h; sourceTree = "<group>"; };
+		DB79DE5F1D99BB4000E7BF51 /* ViewControllerSecond.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerSecond.m; sourceTree = "<group>"; };
+		DB79DE601D99BB4000E7BF51 /* ViewControllerSecond.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewControllerSecond.xib; sourceTree = "<group>"; };
+		DB79DF221DA2F7F300E7BF51 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		DB79DF231DA2F7F300E7BF51 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		DBE069201D976DA8001370B4 /* Leanplum_mParticle_CocoaPods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Leanplum_mParticle_CocoaPods.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBE069241D976DA8001370B4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DBE0692F1D976DA8001370B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DBE069321D976DA8001370B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DBE069341D976DA8001370B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBE069391D976DA9001370B4 /* Leanplum_mParticle_CocoaPodsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Leanplum_mParticle_CocoaPodsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBE0693D1D976DA9001370B4 /* Leanplum_mParticle_CocoaPodsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Leanplum_mParticle_CocoaPodsTests.m; sourceTree = "<group>"; };
+		DBE0693F1D976DA9001370B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBE069441D976DA9001370B4 /* Leanplum_mParticle_CocoaPodsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Leanplum_mParticle_CocoaPodsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBE069481D976DA9001370B4 /* Leanplum_mParticle_CocoaPodsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Leanplum_mParticle_CocoaPodsUITests.m; sourceTree = "<group>"; };
+		DBE0694A1D976DA9001370B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECA52341881907A65B642557 /* Pods-Leanplum_mParticle_CocoaPods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Leanplum_mParticle_CocoaPods.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Leanplum_mParticle_CocoaPods/Pods-Leanplum_mParticle_CocoaPods.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DBE0691D1D976DA8001370B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC35F79E91EC1099E96F6501 /* Pods_Leanplum_mParticle_CocoaPods.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBE069361D976DA9001370B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33B454845D5884F9BA4F71BC /* Pods_Leanplum_mParticle_CocoaPodsTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBE069411D976DA9001370B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E00320F7E3FF1E988AA47AC /* Pods_Leanplum_mParticle_CocoaPodsUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		13F0922077683C0AE5505D90 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A60CAB76799EA9CC4993CBE /* Pods_Leanplum_mParticle_CocoaPods.framework */,
+				BB158D3B7BD5C00B380AB7A7 /* Pods_Leanplum_mParticle_CocoaPodsTests.framework */,
+				6D9910A767E49B890DCE2822 /* Pods_Leanplum_mParticle_CocoaPodsUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DBE069171D976DA8001370B4 = {
+			isa = PBXGroup;
+			children = (
+				DBE069221D976DA8001370B4 /* Leanplum_mParticle_CocoaPods */,
+				DBE0693C1D976DA9001370B4 /* Leanplum_mParticle_CocoaPodsTests */,
+				DBE069471D976DA9001370B4 /* Leanplum_mParticle_CocoaPodsUITests */,
+				DBE069211D976DA8001370B4 /* Products */,
+				EB767597C5B595BC900883D1 /* Pods */,
+				13F0922077683C0AE5505D90 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DBE069211D976DA8001370B4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DBE069201D976DA8001370B4 /* Leanplum_mParticle_CocoaPods.app */,
+				DBE069391D976DA9001370B4 /* Leanplum_mParticle_CocoaPodsTests.xctest */,
+				DBE069441D976DA9001370B4 /* Leanplum_mParticle_CocoaPodsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DBE069221D976DA8001370B4 /* Leanplum_mParticle_CocoaPods */ = {
+			isa = PBXGroup;
+			children = (
+				DB79DE5E1D99BB4000E7BF51 /* ViewControllerSecond.h */,
+				DB79DE5F1D99BB4000E7BF51 /* ViewControllerSecond.m */,
+				DB79DE601D99BB4000E7BF51 /* ViewControllerSecond.xib */,
+				DB79DF221DA2F7F300E7BF51 /* AppDelegate.h */,
+				DB79DF231DA2F7F300E7BF51 /* AppDelegate.m */,
+				DBE0692F1D976DA8001370B4 /* Assets.xcassets */,
+				DBE069311D976DA8001370B4 /* LaunchScreen.storyboard */,
+				DBE069341D976DA8001370B4 /* Info.plist */,
+				DBE069231D976DA8001370B4 /* Supporting Files */,
+			);
+			path = Leanplum_mParticle_CocoaPods;
+			sourceTree = "<group>";
+		};
+		DBE069231D976DA8001370B4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DBE069241D976DA8001370B4 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DBE0693C1D976DA9001370B4 /* Leanplum_mParticle_CocoaPodsTests */ = {
+			isa = PBXGroup;
+			children = (
+				DBE0693D1D976DA9001370B4 /* Leanplum_mParticle_CocoaPodsTests.m */,
+				DBE0693F1D976DA9001370B4 /* Info.plist */,
+			);
+			path = Leanplum_mParticle_CocoaPodsTests;
+			sourceTree = "<group>";
+		};
+		DBE069471D976DA9001370B4 /* Leanplum_mParticle_CocoaPodsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DBE069481D976DA9001370B4 /* Leanplum_mParticle_CocoaPodsUITests.m */,
+				DBE0694A1D976DA9001370B4 /* Info.plist */,
+			);
+			path = Leanplum_mParticle_CocoaPodsUITests;
+			sourceTree = "<group>";
+		};
+		EB767597C5B595BC900883D1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ECA52341881907A65B642557 /* Pods-Leanplum_mParticle_CocoaPods.debug.xcconfig */,
+				41C5948835F7F94293E33183 /* Pods-Leanplum_mParticle_CocoaPods.release.xcconfig */,
+				8A771D89DE9E8A3C59594EC0 /* Pods-Leanplum_mParticle_CocoaPodsTests.debug.xcconfig */,
+				2CA239EBEA045185EE92F91E /* Pods-Leanplum_mParticle_CocoaPodsTests.release.xcconfig */,
+				947478594DB1DFBDB7F77665 /* Pods-Leanplum_mParticle_CocoaPodsUITests.debug.xcconfig */,
+				A02E475E860469516F93CAE7 /* Pods-Leanplum_mParticle_CocoaPodsUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DBE0691F1D976DA8001370B4 /* Leanplum_mParticle_CocoaPods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBE0694D1D976DA9001370B4 /* Build configuration list for PBXNativeTarget "Leanplum_mParticle_CocoaPods" */;
+			buildPhases = (
+				1A2B86E6CD1D4174DC93D4EC /* [CP] Check Pods Manifest.lock */,
+				DBE0691C1D976DA8001370B4 /* Sources */,
+				DBE0691D1D976DA8001370B4 /* Frameworks */,
+				DBE0691E1D976DA8001370B4 /* Resources */,
+				2639834E63BBCC99BCE781D7 /* [CP] Embed Pods Frameworks */,
+				8208F70EE94ABB07202AE7B6 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Leanplum_mParticle_CocoaPods;
+			productName = Leanplum_mParticle_CocoaPods;
+			productReference = DBE069201D976DA8001370B4 /* Leanplum_mParticle_CocoaPods.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DBE069381D976DA9001370B4 /* Leanplum_mParticle_CocoaPodsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBE069501D976DA9001370B4 /* Build configuration list for PBXNativeTarget "Leanplum_mParticle_CocoaPodsTests" */;
+			buildPhases = (
+				008944E1C3E1CA99EE8F1787 /* [CP] Check Pods Manifest.lock */,
+				DBE069351D976DA9001370B4 /* Sources */,
+				DBE069361D976DA9001370B4 /* Frameworks */,
+				DBE069371D976DA9001370B4 /* Resources */,
+				DC5C5730E0D0C09C57387274 /* [CP] Embed Pods Frameworks */,
+				BCABB44C5F4CAB143E5BF076 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DBE0693B1D976DA9001370B4 /* PBXTargetDependency */,
+			);
+			name = Leanplum_mParticle_CocoaPodsTests;
+			productName = Leanplum_mParticle_CocoaPodsTests;
+			productReference = DBE069391D976DA9001370B4 /* Leanplum_mParticle_CocoaPodsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DBE069431D976DA9001370B4 /* Leanplum_mParticle_CocoaPodsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBE069531D976DA9001370B4 /* Build configuration list for PBXNativeTarget "Leanplum_mParticle_CocoaPodsUITests" */;
+			buildPhases = (
+				7FA58317DA61A5C32A758D97 /* [CP] Check Pods Manifest.lock */,
+				DBE069401D976DA9001370B4 /* Sources */,
+				DBE069411D976DA9001370B4 /* Frameworks */,
+				DBE069421D976DA9001370B4 /* Resources */,
+				FFB2425851C3A684D1B7647A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DBE069461D976DA9001370B4 /* PBXTargetDependency */,
+			);
+			name = Leanplum_mParticle_CocoaPodsUITests;
+			productName = Leanplum_mParticle_CocoaPodsUITests;
+			productReference = DBE069441D976DA9001370B4 /* Leanplum_mParticle_CocoaPodsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DBE069181D976DA8001370B4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Sophie Saouma";
+				TargetAttributes = {
+					DBE0691F1D976DA8001370B4 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 8E6ZL73NU3;
+						ProvisioningStyle = Automatic;
+					};
+					DBE069381D976DA9001370B4 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 8E6ZL73NU3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DBE0691F1D976DA8001370B4;
+					};
+					DBE069431D976DA9001370B4 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 8E6ZL73NU3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DBE0691F1D976DA8001370B4;
+					};
+				};
+			};
+			buildConfigurationList = DBE0691B1D976DA8001370B4 /* Build configuration list for PBXProject "Leanplum_mParticle_CocoaPods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DBE069171D976DA8001370B4;
+			productRefGroup = DBE069211D976DA8001370B4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DBE0691F1D976DA8001370B4 /* Leanplum_mParticle_CocoaPods */,
+				DBE069381D976DA9001370B4 /* Leanplum_mParticle_CocoaPodsTests */,
+				DBE069431D976DA9001370B4 /* Leanplum_mParticle_CocoaPodsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DBE0691E1D976DA8001370B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBE069331D976DA8001370B4 /* LaunchScreen.storyboard in Resources */,
+				DB79DE621D99BB4000E7BF51 /* ViewControllerSecond.xib in Resources */,
+				DBE069301D976DA8001370B4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBE069371D976DA9001370B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBE069421D976DA9001370B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		008944E1C3E1CA99EE8F1787 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1A2B86E6CD1D4174DC93D4EC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2639834E63BBCC99BCE781D7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Leanplum_mParticle_CocoaPods/Pods-Leanplum_mParticle_CocoaPods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7FA58317DA61A5C32A758D97 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8208F70EE94ABB07202AE7B6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Leanplum_mParticle_CocoaPods/Pods-Leanplum_mParticle_CocoaPods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BCABB44C5F4CAB143E5BF076 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Leanplum_mParticle_CocoaPodsTests/Pods-Leanplum_mParticle_CocoaPodsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC5C5730E0D0C09C57387274 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Leanplum_mParticle_CocoaPodsTests/Pods-Leanplum_mParticle_CocoaPodsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFB2425851C3A684D1B7647A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Leanplum_mParticle_CocoaPodsUITests/Pods-Leanplum_mParticle_CocoaPodsUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DBE0691C1D976DA8001370B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB79DF241DA2F7F300E7BF51 /* AppDelegate.m in Sources */,
+				DB79DE611D99BB4000E7BF51 /* ViewControllerSecond.m in Sources */,
+				DBE069251D976DA8001370B4 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBE069351D976DA9001370B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBE0693E1D976DA9001370B4 /* Leanplum_mParticle_CocoaPodsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBE069401D976DA9001370B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBE069491D976DA9001370B4 /* Leanplum_mParticle_CocoaPodsUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DBE0693B1D976DA9001370B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DBE0691F1D976DA8001370B4 /* Leanplum_mParticle_CocoaPods */;
+			targetProxy = DBE0693A1D976DA9001370B4 /* PBXContainerItemProxy */;
+		};
+		DBE069461D976DA9001370B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DBE0691F1D976DA8001370B4 /* Leanplum_mParticle_CocoaPods */;
+			targetProxy = DBE069451D976DA9001370B4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DBE069311D976DA8001370B4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DBE069321D976DA8001370B4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DBE0694B1D976DA9001370B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DBE0694C1D976DA9001370B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DBE0694E1D976DA9001370B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECA52341881907A65B642557 /* Pods-Leanplum_mParticle_CocoaPods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8E6ZL73NU3;
+				INFOPLIST_FILE = Leanplum_mParticle_CocoaPods/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.SMS.Leanplum-mParticle-CocoaPods";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DBE0694F1D976DA9001370B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41C5948835F7F94293E33183 /* Pods-Leanplum_mParticle_CocoaPods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8E6ZL73NU3;
+				INFOPLIST_FILE = Leanplum_mParticle_CocoaPods/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.SMS.Leanplum-mParticle-CocoaPods";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DBE069511D976DA9001370B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A771D89DE9E8A3C59594EC0 /* Pods-Leanplum_mParticle_CocoaPodsTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 8E6ZL73NU3;
+				INFOPLIST_FILE = Leanplum_mParticle_CocoaPodsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.SMS.Leanplum-mParticle-CocoaPodsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Leanplum_mParticle_CocoaPods.app/Leanplum_mParticle_CocoaPods";
+			};
+			name = Debug;
+		};
+		DBE069521D976DA9001370B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CA239EBEA045185EE92F91E /* Pods-Leanplum_mParticle_CocoaPodsTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 8E6ZL73NU3;
+				INFOPLIST_FILE = Leanplum_mParticle_CocoaPodsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.SMS.Leanplum-mParticle-CocoaPodsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Leanplum_mParticle_CocoaPods.app/Leanplum_mParticle_CocoaPods";
+			};
+			name = Release;
+		};
+		DBE069541D976DA9001370B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 947478594DB1DFBDB7F77665 /* Pods-Leanplum_mParticle_CocoaPodsUITests.debug.xcconfig */;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 8E6ZL73NU3;
+				INFOPLIST_FILE = Leanplum_mParticle_CocoaPodsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.SMS.Leanplum-mParticle-CocoaPodsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Leanplum_mParticle_CocoaPods;
+			};
+			name = Debug;
+		};
+		DBE069551D976DA9001370B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A02E475E860469516F93CAE7 /* Pods-Leanplum_mParticle_CocoaPodsUITests.release.xcconfig */;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 8E6ZL73NU3;
+				INFOPLIST_FILE = Leanplum_mParticle_CocoaPodsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.SMS.Leanplum-mParticle-CocoaPodsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Leanplum_mParticle_CocoaPods;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DBE0691B1D976DA8001370B4 /* Build configuration list for PBXProject "Leanplum_mParticle_CocoaPods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBE0694B1D976DA9001370B4 /* Debug */,
+				DBE0694C1D976DA9001370B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBE0694D1D976DA9001370B4 /* Build configuration list for PBXNativeTarget "Leanplum_mParticle_CocoaPods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBE0694E1D976DA9001370B4 /* Debug */,
+				DBE0694F1D976DA9001370B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBE069501D976DA9001370B4 /* Build configuration list for PBXNativeTarget "Leanplum_mParticle_CocoaPodsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBE069511D976DA9001370B4 /* Debug */,
+				DBE069521D976DA9001370B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBE069531D976DA9001370B4 /* Build configuration list for PBXNativeTarget "Leanplum_mParticle_CocoaPodsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBE069541D976DA9001370B4 /* Debug */,
+				DBE069551D976DA9001370B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DBE069181D976DA8001370B4 /* Project object */;
+}
