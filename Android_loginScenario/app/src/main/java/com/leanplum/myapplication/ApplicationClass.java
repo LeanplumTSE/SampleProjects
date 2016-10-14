@@ -27,7 +27,6 @@ public class ApplicationClass extends Application {
         Parser.parseVariables(this);
         Parser.parseVariablesForClasses(LPvariables.class);
 
-
         super.onCreate();
 
         if (BuildConfig.DEBUG) {
@@ -35,7 +34,6 @@ public class ApplicationClass extends Application {
         } else {
             Leanplum.setAppIdForProductionMode("app_A9pFafRjGoHqxZtjxsqpwTUla1NXTR0LI8KPlNrSDRU", "prod_SI71aoflPA9GHws6jB9qv4QoMYsaazHwvCW3qpuUIag");
         }
-
 
         LeanplumPushService.setGcmSenderId(LeanplumPushService.LEANPLUM_SENDER_ID);
 

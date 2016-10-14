@@ -20,7 +20,7 @@ public class Splashcreen extends AppCompatActivity {
 
             try {
                 // Thread will sleep for 5 seconds
-                sleep(10 * 1000);
+                sleep(5 * 1000);
 
                 Log.i("### ", "time passed");
 
@@ -38,7 +38,7 @@ public class Splashcreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Leanplum.addVariablesChangedHandler(new VariablesChangedCallback() {
+        Leanplum.addVariablesChangedAndNoDownloadsPendingHandler(new VariablesChangedCallback() {
             @Override
             public void variablesChanged() {
                 Log.i("### ", "Variables changed callback triggered - opening MainActivity");
@@ -46,17 +46,13 @@ public class Splashcreen extends AppCompatActivity {
                 Log.i("### ", LPvariables.welcomeMessage);
 
                 // start thread
-                background.start();
+//                background.start();
+
+                Intent intent = new Intent(Splashcreen.this, MainActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
 
-//        Leanplum.addVariablesChangedAndNoDownloadsPendingHandler(new VariablesChangedCallback() {
-//            @Override
-//            public void variablesChanged() {
-//                Intent intent = new Intent(Splashcreen.this, MainActivity.class);
-//                startActivity(intent);
-//                finish();
-//            }
-//        });
     }
 }
