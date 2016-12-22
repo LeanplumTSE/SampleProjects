@@ -15,10 +15,6 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    public void openAct2(View view){
-        Intent intent = new Intent(this, Activity2.class);
-        startActivity(intent);
-    }
 
     protected BroadcastReceiver mNotificationReceiver = new BroadcastReceiver() {
         @Override

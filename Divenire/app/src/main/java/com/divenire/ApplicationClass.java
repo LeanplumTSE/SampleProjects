@@ -1,13 +1,10 @@
 package com.divenire;
 
 import android.app.Application;
-import android.util.Log;
 
-import com.appboy.support.AppboyLogger;
 import com.leanplum.Leanplum;
 import com.leanplum.LeanplumActivityHelper;
 import com.leanplum.LeanplumPushService;
-import com.appboy.AppboyLifecycleCallbackListener;
 import com.leanplum.annotations.Parser;
 
 /**

@@ -33,23 +33,6 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Activity2"/>
-
-        <activity
-            android:name=".testClass"
-            android:label="@string/titleClass" >
-            <intent-filter android:label="@string/titleClass">
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-                <!-- note that the leading "/" is required for pathPrefix-->
-                <!-- Accepts URIs that begin with "example://gizmos” -->
-                <data android:scheme="example"
-                    android:host="gizmos" />
-
-            </intent-filter>
-        </activity>
-
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
