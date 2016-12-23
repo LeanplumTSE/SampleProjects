@@ -13,9 +13,8 @@ import com.leanplum.annotations.Parser;
 
 public class ApplicationClass extends Application {
 
-    // Setting it manually at the moment
-    // Should be true if app is foregrounded - false if backgrounded
-    public static boolean isActive = true;
+    // isActive boolean being updated from the BaseActivity whether onPause/onResume are executed
+    public static boolean isActive = false;
 
     @Override
     public void onCreate() {
@@ -27,14 +26,12 @@ public class ApplicationClass extends Application {
 
 
         if (BuildConfig.DEBUG) {
-            Leanplum.setAppIdForDevelopmentMode("app_CWa0CcxPpZD2QaR4IT7gQihLUyCJh6FF4I2lLBQgHok", "dev_v4n2fDHDzAEV79DygT79zyc5zAsDquumlVFfcLMAjAY");
+            Leanplum.setAppIdForDevelopmentMode("APP_KEY", "DEV_KEY");
         } else {
-            Leanplum.setAppIdForProductionMode("app_CWa0CcxPpZD2QaR4IT7gQihLUyCJh6FF4I2lLBQgHok", "prod_oiRyVYqodd6d0tobY7qFeXidZJamhEUGQDfvASf6614");
+            Leanplum.setAppIdForProductionMode("APP_KEY", "PROD_KEY");
         }
 
         LeanplumPushService.setGcmSenderId(LeanplumPushService.LEANPLUM_SENDER_ID);
-
-//        LeanplumPushService.setGcmSenderId("709867216442");
 
         Leanplum.start(this);
     }
