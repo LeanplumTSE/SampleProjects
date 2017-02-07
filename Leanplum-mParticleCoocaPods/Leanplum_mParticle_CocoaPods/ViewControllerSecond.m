@@ -83,6 +83,26 @@
     
 }
 
+-(IBAction)setUserID:(id)sender {
+    
+    NSLog(@"Setting UserID");
+    [Leanplum setUserId:@"newUserID"];
+    
+}
+
+-(IBAction)trackEvent:(id)sender {
+    
+    MPEvent *event = [[MPEvent alloc] initWithName:@"Food Order" type:MPEventTypeTransaction];
+    
+    event.info = @{@"Spice":@"Hot",
+                   @"Menu":@"Weekdays"}; // optional
+    event.duration = @(100); // in seconds (optional)
+    event.category = @"Delivery"; // optional
+    
+    [[MParticle sharedInstance] logEvent:event];
+    
+}
+
 /*
 #pragma mark - Navigation
 

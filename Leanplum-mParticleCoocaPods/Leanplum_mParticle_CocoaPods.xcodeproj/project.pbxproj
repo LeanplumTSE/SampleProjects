@@ -255,7 +255,7 @@
 				TargetAttributes = {
 					DBE0691F1D976DA8001370B4 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 8E6ZL73NU3;
+						DevelopmentTeam = 4375P428LP;
 						ProvisioningStyle = Automatic;
 					};
 					DBE069381D976DA9001370B4 = {
@@ -589,10 +589,10 @@
 			baseConfigurationReference = ECA52341881907A65B642557 /* Pods-Leanplum_mParticle_CocoaPods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8E6ZL73NU3;
+				DEVELOPMENT_TEAM = 4375P428LP;
 				INFOPLIST_FILE = Leanplum_mParticle_CocoaPods/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.SMS.Leanplum-mParticle-CocoaPods";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fede.fedeTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -602,10 +602,10 @@
 			baseConfigurationReference = 41C5948835F7F94293E33183 /* Pods-Leanplum_mParticle_CocoaPods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8E6ZL73NU3;
+				DEVELOPMENT_TEAM = 4375P428LP;
 				INFOPLIST_FILE = Leanplum_mParticle_CocoaPods/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.SMS.Leanplum-mParticle-CocoaPods";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fede.fedeTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
