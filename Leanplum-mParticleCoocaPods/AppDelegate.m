@@ -30,6 +30,8 @@
     // Override point for customization after application launch.
     [[MParticle sharedInstance] startWithKey:@"04780a3595efa74fbe58dca6f7161f96" secret:@"lAYFYw6LEsj7ZJIizaxfvrLvHIOo9w-0NxopiUXIqc4Gh8J2b27ffzXDeRAAVi1T"];
     
+    [Leanplum trackAllAppScreens]
+    
     [Leanplum onStartResponse:^(bool success) {
         [Leanplum track:@"LeanplumLoaded"]; 
     }];
