@@ -1,0 +1,39 @@
+
+
+Tue Jan 31 22:02:49 2017
+Command line: TestDisk
+
+TestDisk 7.0, Data Recovery Utility, April 2015
+Christophe GRENIER <grenier@cgsecurity.org>
+http://www.cgsecurity.org
+OS: Darwin, kernel 16.3.0 (Darwin Kernel Version 16.3.0: Thu Nov 17 20:23:58 PST 2016; root:xnu-3789.3
+Compiler: GCC 4.0
+Compilation date: 2015-04-18T13:01:34
+ext2fs lib: 1.42.8, ntfs lib: libntfs-3g, reiserfs lib: 0.3.1-rc8, ewf lib: 20120504, curses lib: ncurses 5.4
+Hard disk list
+Disk /dev/disk0 - 251 GB / 233 GiB - 490234752 sectors (RO), sector size=512
+Disk /dev/disk2 - 1000 GB / 931 GiB - 1953458176 sectors (RO), sector size=512
+Disk /dev/disk3 - 2000 GB / 1862 GiB - 3906963456 sectors, sector size=512
+Disk /dev/disk4 - 1359 MB / 1296 MiB - 2654756 sectors (RO), sector size=512
+Disk /dev/disk5 - 1329 MB / 1267 MiB - 2595788 sectors (RO), sector size=512
+Disk /dev/disk6 - 2000 GB / 1862 GiB - 3906963456 sectors (RO), sector size=512
+Disk /dev/rdisk0 - 251 GB / 233 GiB - 490234752 sectors (RO), sector size=512
+Disk /dev/rdisk1 - 249 GB / 232 GiB - 487849728 sectors (RO), sector size=512
+Disk /dev/rdisk2 - 1000 GB / 931 GiB - 1953458176 sectors (RO), sector size=512
+Disk /dev/rdisk3 - 2000 GB / 1862 GiB - 3906963456 sectors, sector size=512
+Disk /dev/rdisk4 - 1359 MB / 1296 MiB - 2654756 sectors (RO), sector size=512
+Disk /dev/rdisk5 - 1329 MB / 1267 MiB - 2595788 sectors (RO), sector size=512
+Disk /dev/rdisk6 - 2000 GB / 1862 GiB - 3906963456 sectors (RO), sector size=512
+
+Partition table type (auto): EFI GPT
+Media is opened in read-only.
+Partition table type default to EFI GPT
+Partition table type (auto): EFI GPT
+Media is opened in read-only.
+Partition table type default to EFI GPT
+Partition table type default to EFI GPT
+Media is opened in read-only.
+Partition table type (auto): EFI GPT
+Media is opened in read-only.
+
+TestDisk exited normally.
