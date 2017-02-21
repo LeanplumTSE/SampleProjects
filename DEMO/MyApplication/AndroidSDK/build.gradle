@@ -1,0 +1,126 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.jfrog.artifactory'
+apply plugin: 'maven-publish'
+
+allprojects {
+    gradle.projectsEvaluated {
+        tasks.withType(JavaCompile) {
+            options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+        }
+    }
+}
+
+dependencies {
+    provided 'com.android.support:support-v4:25.1.0'
+    provided 'com.android.support:appcompat-v7:25.1.0'
+    provided 'com.android.support:recyclerview-v7:25.1.0'
+    provided('com.google.android.gms:play-services-gcm:9.6.1') {
+        exclude module: 'support-v4'
+    }
+    provided('com.google.firebase:firebase-messaging:10.0.1') {
+        exclude module: 'support-v4'
+    }
+    provided('com.google.android.gms:play-services-location:10.0.1') {
+        exclude module: 'support-v4'
+    }
+}
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    useLibrary 'org.apache.http.legacy'
+    publishNonDefault true
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles 'proguard-project.txt'
+        }
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            resources.srcDirs = ['src']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+        }
+
+        // Move the tests to tests/java, tests/res, etc...
+        instrumentTest.setRoot('tests')
+
+        // Move the build types to build-types/<type>
+        // For instance, build-types/debug/java, build-types/debug/AndroidManifest.xml, ...
+        // This moves them out of them default location under src/<type>/... which would
+        // conflict with src/ being used by the main source set.
+        // Adding new build types or product flavors should be accompanied
+        // by a similar customization.
+        debug.setRoot('build-types/debug')
+        release.setRoot('build-types/release')
+    }
+}
+
+task generateJavadoc(type: Javadoc) {
+    exclude 'com/leanplum/internal'
+    exclude 'com/leanplum/messagetemplates'
+    exclude 'com/leanplum/utils'
+    exclude 'com/leanplum/views'
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+    destinationDir = file("./javadoc/")
+    failOnError false
+}
+
+def libraryGroupId = 'com.leanplum'
+def libraryArtifactId = 'Leanplum'
+def libraryVersion = '1.3.2'
+
+task makeJar(type: Copy) {
+    from('build/intermediates/bundles/release/')
+    into('build/outputs/jar/')
+    include('classes.jar')
+    rename('classes.jar', 'AndroidSDK-release.jar')
+}
+
+publishing {
+    publications {
+        aar(MavenPublication) {
+            groupId libraryGroupId
+            version libraryVersion
+            artifactId libraryArtifactId
+
+            artifact("$buildDir/outputs/aar/AndroidSDK-release.aar")
+        }
+        jar(MavenPublication) {
+            groupId libraryGroupId
+            version libraryVersion
+            artifactId libraryArtifactId
+
+            artifact("$buildDir/outputs/jar/AndroidSDK-release.jar")
+        }
+    }
+}
+
+if (project.hasProperty('artifactoryUsername') && project.hasProperty('artifactoryPassword')) {
+    artifactory {
+        contextUrl = 'http://artifactory-upload.leanplum.com'
+        publish {
+            repository {
+                repoKey = 'libs-snapshot-local'
+
+                username = artifactoryUsername
+                password = artifactoryPassword
+            }
+            defaults {
+                publications('aar', 'jar')
+                publishArtifacts = true
+
+                properties = ['qa.level': 'basic', 'q.os': 'android', 'dev.team': 'core']
+                publishPom = true
+            }
+        }
+    }
+}

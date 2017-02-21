@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="/Users/fede/DEVELOPMENT/ANDROID/IN_PROGRESS/MyApplication/AndroidSDK/assets"/><source path="/Users/fede/DEVELOPMENT/ANDROID/IN_PROGRESS/MyApplication/AndroidSDK/build/generated/assets/shaders/debug"/></dataSet><dataSet config="debug"><source path="/Users/fede/DEVELOPMENT/ANDROID/IN_PROGRESS/MyApplication/AndroidSDK/build-types/debug/assets"/></dataSet></merger>
