@@ -22,6 +22,8 @@ DEFINE_VAR_STRING(welcomeMessage, @"Welcome to Leanplum!");
 DEFINE_VAR_FLOAT(floatvar, 1.5);
 DEFINE_VAR_INT(intvalue, 20);
 
+DEFINE_VAR_BOOL(boolCheck, true);
+
 DEFINE_VAR_DICTIONARY_WITH_OBJECTS_AND_KEYS(
                                             powerup,
                                             @"Turbo Boost", @"name",
@@ -31,34 +33,51 @@ DEFINE_VAR_DICTIONARY_WITH_OBJECTS_AND_KEYS(
                                             nil);
 
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    
-#ifdef DEBUG
-    LEANPLUM_USE_ADVERTISING_ID;
-    [Leanplum setAppId:@"app_azkWJFEE5xEznFYd4vVmrxfs7vaQbl0dEWIrOiwDrvg" withDevelopmentKey:@"dev_L0gLn4SKg8QaE5fGE52E6XWFNJ6ODQOpFyxngB761X8"];
-#else
-    [Leanplum setAppId:@"app_azkWJFEE5xEznFYd4vVmrxfs7vaQbl0dEWIrOiwDrvg" withProductionKey:@"prod_ep9l62OJL8sC99QFXTfCHHGgbj8NQ3EorD7vYtd8DaM"];
-#endif
-    
 
+
+//
+//     IOS_app
+//#ifdef DEBUG
+//    LEANPLUM_USE_ADVERTISING_ID;
+//    [Leanplum setAppId:@"app_lahFY0OlDNM0KMjZyWEYjs6Zm9DiAEPObc3viGhhw5g" withDevelopmentKey:@"dev_M4NzDeT6O7qOkde50lWGUO9U1UeAo4xKgqBjrrWbxrs"];
+//#else
+    [Leanplum setAppId:@"app_lahFY0OlDNM0KMjZyWEYjs6Zm9DiAEPObc3viGhhw5g" withProductionKey:@"prod_dN3Qi0qdqHPzvwuAtFw3ntASS5SBgvpxDZ73Fqa0OEw"];
+//#endif
+    
+        
+    
     [Leanplum onVariablesChanged:^() {
         NSLog(@"### Callback triggered");
         NSLog(@"### %@", welcomeMessage.stringValue);
         NSLog(@"### %0.1f", floatvar.floatValue);
         NSLog(@"### %d", intvalue.intValue);
         NSLog(@"### %2f", [[powerup objectForKey:@"speedMultiplier"] floatValue]);
+        NSLog(@"### %d", boolCheck.intValue);
     }];
     
     
 // [Leanplum allowInterfaceEditing];
 // [Leanplum setVerboseLoggingInDevelopmentMode:true];
     
-    [Leanplum setDeviceId:@"newDeviceTest_002"];
+//    [Leanplum trackAllAppScreens];
+    
+    
+    [Leanplum onStartResponse:^(bool success) {
+        NSLog(@"### Leanplum has started!");
+        NSLog(@"### onStartResponse callback triggered");
+        NSLog(@"%@", [Leanplum variants]);
+    }];
+    
+    
+//    [Leanplum setDeviceId:@"12345-678910"];
+//    [Leanplum setDeviceId:@"1098765-4321-9999-7-151"];
+
+    
     
     [Leanplum start];
     
+//    [Leanplum trackInAppPurchase:(SKPaymentTransaction *)];
     
     
     // Override point for customization after application launch.
@@ -85,6 +104,11 @@ DEFINE_VAR_DICTIONARY_WITH_OBJECTS_AND_KEYS(
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
+{
+    [Leanplum handleNotification:userInfo fetchCompletionHandler:completionHandler];
 }
 
 @end

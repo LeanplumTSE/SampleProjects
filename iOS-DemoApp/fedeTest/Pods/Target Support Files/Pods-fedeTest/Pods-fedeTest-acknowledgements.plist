@@ -15,6 +15,8 @@
 		<dict>
 			<key>FooterText</key>
 			<string>See https://www.leanplum.com/tos</string>
+			<key>License</key>
+			<string>Commercial</string>
 			<key>Title</key>
 			<string>Leanplum-iOS-Location</string>
 			<key>Type</key>
@@ -23,6 +25,8 @@
 		<dict>
 			<key>FooterText</key>
 			<string>See https://www.leanplum.com/tos</string>
+			<key>License</key>
+			<string>Commercial</string>
 			<key>Title</key>
 			<string>Leanplum-iOS-SDK</string>
 			<key>Type</key>

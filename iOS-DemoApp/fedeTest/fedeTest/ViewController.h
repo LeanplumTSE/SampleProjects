@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SecondViewController.h"
 
 @interface ViewController : UIViewController
+{
+    SecondViewController *secondViewController;
+}
 
-@property (strong, nonatomic) UIWindow *window2;
+//@property (strong, nonatomic) UIWindow *window2;
 
 - (IBAction)buttonAction:(id)sender;
 

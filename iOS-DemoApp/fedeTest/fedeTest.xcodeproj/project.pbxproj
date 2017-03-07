@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B34707D1E13F9E900B0BD7C /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B34707B1E13F9E900B0BD7C /* SecondViewController.m */; };
+		8B34707E1E13F9E900B0BD7C /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B34707C1E13F9E900B0BD7C /* SecondViewController.xib */; };
 		8B7DA5301C8E54CD00E74DCC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B7DA52F1C8E54CD00E74DCC /* main.m */; };
 		8B7DA5331C8E54CD00E74DCC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B7DA5321C8E54CD00E74DCC /* AppDelegate.m */; };
 		8B7DA5361C8E54CD00E74DCC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B7DA5351C8E54CD00E74DCC /* ViewController.m */; };
@@ -20,6 +22,10 @@
 /* Begin PBXFileReference section */
 		1BECC4D5EAF0F6D8F6126EDE /* Pods-fedeTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fedeTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fedeTest/Pods-fedeTest.debug.xcconfig"; sourceTree = "<group>"; };
 		6309C106C6888F651D89955B /* Pods-fedeTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fedeTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-fedeTest/Pods-fedeTest.release.xcconfig"; sourceTree = "<group>"; };
+		8B3470791E13F22C00B0BD7C /* fedeTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = fedeTest.entitlements; sourceTree = "<group>"; };
+		8B34707A1E13F9E900B0BD7C /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		8B34707B1E13F9E900B0BD7C /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		8B34707C1E13F9E900B0BD7C /* SecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
 		8B7DA52B1C8E54CD00E74DCC /* fedeTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fedeTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B7DA52F1C8E54CD00E74DCC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8B7DA5311C8E54CD00E74DCC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -68,10 +74,14 @@
 		8B7DA52D1C8E54CD00E74DCC /* fedeTest */ = {
 			isa = PBXGroup;
 			children = (
+				8B3470791E13F22C00B0BD7C /* fedeTest.entitlements */,
 				8B7DA5311C8E54CD00E74DCC /* AppDelegate.h */,
 				8B7DA5321C8E54CD00E74DCC /* AppDelegate.m */,
 				8B7DA5341C8E54CD00E74DCC /* ViewController.h */,
 				8B7DA5351C8E54CD00E74DCC /* ViewController.m */,
+				8B34707A1E13F9E900B0BD7C /* SecondViewController.h */,
+				8B34707B1E13F9E900B0BD7C /* SecondViewController.m */,
+				8B34707C1E13F9E900B0BD7C /* SecondViewController.xib */,
 				8B7DA5371C8E54CD00E74DCC /* Main.storyboard */,
 				8B7DA53A1C8E54CD00E74DCC /* Assets.xcassets */,
 				8B7DA53C1C8E54CE00E74DCC /* LaunchScreen.storyboard */,
@@ -141,6 +151,17 @@
 					8B7DA52A1C8E54CD00E74DCC = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = 4375P428LP;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.SafariKeychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -171,6 +192,7 @@
 				8B7DA53E1C8E54CE00E74DCC /* LaunchScreen.storyboard in Resources */,
 				8B7DA53B1C8E54CD00E74DCC /* Assets.xcassets in Resources */,
 				8B7DA5391C8E54CD00E74DCC /* Main.storyboard in Resources */,
+				8B34707E1E13F9E900B0BD7C /* SecondViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,7 +241,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -229,6 +251,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B34707D1E13F9E900B0BD7C /* SecondViewController.m in Sources */,
 				8B7DA5361C8E54CD00E74DCC /* ViewController.m in Sources */,
 				8B7DA5331C8E54CD00E74DCC /* AppDelegate.m in Sources */,
 				8B7DA5301C8E54CD00E74DCC /* main.m in Sources */,
@@ -344,8 +367,10 @@
 			baseConfigurationReference = 1BECC4D5EAF0F6D8F6126EDE /* Pods-fedeTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = fedeTest/fedeTest.entitlements;
 				DEVELOPMENT_TEAM = 4375P428LP;
 				INFOPLIST_FILE = fedeTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fede.fedeTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -357,8 +382,10 @@
 			baseConfigurationReference = 6309C106C6888F651D89955B /* Pods-fedeTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = fedeTest/fedeTest.entitlements;
 				DEVELOPMENT_TEAM = 4375P428LP;
 				INFOPLIST_FILE = fedeTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fede.fedeTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -4,7 +4,7 @@
 
 target 'fedeTest' do
 	use_frameworks!
-	pod 'Leanplum-iOS-SDK', '~> 1.4.0'
-	pod 'Leanplum-iOS-Location'
+	pod 'Leanplum-iOS-SDK', '1.5.1'
+	pod 'Leanplum-iOS-Location', '1.5.1'
 end
 
