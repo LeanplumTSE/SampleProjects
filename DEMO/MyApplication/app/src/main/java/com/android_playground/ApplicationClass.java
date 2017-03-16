@@ -23,7 +23,7 @@ public class ApplicationClass extends Application {
         Leanplum.setApplicationContext(this);
         LeanplumActivityHelper.enableLifecycleCallbacks(this);
 
-        LeanplumActivityHelper.deferMessagesForActivities(SplashscreenActivity.class);
+        LeanplumActivityHelper.deferMessagesForActivities(SplashscreenActivity.class, MainActivity.class);
 
         Parser.parseVariablesForClasses(GlobalVariables.class);
 
@@ -56,7 +56,7 @@ public class ApplicationClass extends Application {
 
 
         // Firebase!
-        LeanplumPushService.enableFirebase();
+//        LeanplumPushService.enableFirebase();
 
         Leanplum.start(this);
     }

@@ -9,12 +9,12 @@
     <!--<uses-permission android:name="android.permission.WAKE_LOCK" />-->
 
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-    <permission android:name="${applicationId}.permission.C2D_MESSAGE" android:protectionLevel="signature" />
-    <uses-permission android:name="${applicationId}.permission.C2D_MESSAGE" />
+    <!--<permission android:name="${applicationId}.permission.C2D_MESSAGE" android:protectionLevel="signature" />-->
+    <!--<uses-permission android:name="${applicationId}.permission.C2D_MESSAGE" />-->
 
     <!-- For Geofencing -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!--<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>-->
+    <!--<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>-->
     <!-- For Geofencing END -->
 
 
@@ -80,7 +80,6 @@
         <!-- FIREBASE END -->
 
 
-        <!-- GCM -->
         <!--<service-->
             <!--android:name="com.leanplum.LeanplumPushListenerService"-->
             <!--android:exported="false" >-->
@@ -93,6 +92,7 @@
 
         <service android:name="com.leanplum.LeanplumPushRegistrationService" />
 
+
         <!--<service-->
             <!--android:name="com.leanplum.LeanplumPushInstanceIDService"-->
             <!--android:exported="false">-->
@@ -100,8 +100,6 @@
                 <!--<action android:name="com.google.android.gms.iid.InstanceID" />-->
             <!--</intent-filter>-->
         <!--</service>-->
-        <!-- GCM END -->
-
 
 
         <!-- for Geofencing only -->

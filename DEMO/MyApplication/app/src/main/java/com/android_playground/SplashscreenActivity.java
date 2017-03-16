@@ -15,6 +15,8 @@ import com.leanplum.callbacks.VariablesChangedCallback;
 
 public class SplashscreenActivity extends AppCompatActivity {
 
+    long startTime, endTime, elapsedNanos, elapsedMS, elapsedMSRoundedTo30;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,10 +26,21 @@ public class SplashscreenActivity extends AppCompatActivity {
             public void onResponse(boolean b) {
                 Log.i("### ", "Splashscreen  - Leanplum has started and All variables changed");
 
+                long endStartTime = System.nanoTime();
+
+                long elapsedStartNanos = endStartTime - startTime;
+                long elapsedStartMS = elapsedStartNanos / 1000000;
+                long elapsedStartMSRoundedTo30 = (elapsedStartMS / 30) * 30;
+                Log.i("#### ", "Leanplum started");
+
+                String waitTimeString = String.valueOf(elapsedStartMSRoundedTo30);
+                Log.i("### ", "Leanplum start Time: " + waitTimeString);
+
                 Intent intent = new Intent(SplashscreenActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish();
             }
         });
+
     }
 }

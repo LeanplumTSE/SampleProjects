@@ -57,11 +57,13 @@ public class MainActivity extends AppCompatActivity {
 //        Leanplum.track("logPurchase", 19.90);
 
         // UserAttribute test
-        Map<String, Object> attributes = new HashMap<String, Object>();
-        attributes.put("Name", "Federico");
-        attributes.put("ZIPcode", 94107);
-        attributes.put("email", "federico@leanplum.com");
-        Leanplum.setUserAttributes(attributes);
+//        Map<String, Object> attributes = new HashMap<String, Object>();
+//        attributes.put("Name", "Federico");
+//        attributes.put("ZIPcode", 94107);
+//        attributes.put("email", "federico@leanplum.com");
+//        Leanplum.setUserAttributes(attributes);
+
+        Leanplum.track("triggerWebhook");
 
 //        Leanplum.forceContentUpdate();
     }
