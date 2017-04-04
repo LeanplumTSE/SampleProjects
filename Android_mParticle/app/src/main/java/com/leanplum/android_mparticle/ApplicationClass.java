@@ -23,71 +23,39 @@ import com.mparticle.MParticle;
 
 public class ApplicationClass extends Application {
 
-    public enum Environment {
-        AutoDetect,
-        Development,
-        Production;
-    }
 
     @Variable
-    public static String welcomeString = "ddd";
-
-
-    @Variable
-    public static int StartupScreen = 0;
-
+    public static String test = "www";
 
     @Override
     public void onCreate() {
         super.onCreate();
 
-
         LeanplumPushService.setGcmSenderId(LeanplumPushService.LEANPLUM_SENDER_ID);
 
-        LeanplumPushService.setCustomizer(new LeanplumPushNotificationCustomizer() {
-            //
-            @Override
-            public void customize(NotificationCompat.Builder builder, Bundle notificationPayload) {
-
-                // Setting a custom smallIcon included in the Drawable folder
-                builder.setSmallIcon(R.drawable.atest);
-
-                // Setting a custom largeIcon included in the Drawable folder
-                Bitmap largeIcon = BitmapFactory.decodeResource(getResources(), R.drawable.androidorange);
-                builder.setLargeIcon(largeIcon);
-
-                // Setting a custom Big Picture included in the Drawable folder, beneath the notification
-                Bitmap androidBanner = BitmapFactory.decodeResource(getResources(), R.drawable.androidappsdev);
-                builder.setStyle(new NotificationCompat.BigPictureStyle().bigPicture(androidBanner));
-
-            }
-        });
+//        LeanplumPushService.setCustomizer(new LeanplumPushNotificationCustomizer() {
+//            //
+//            @Override
+//            public void customize(NotificationCompat.Builder builder, Bundle notificationPayload) {
+//
+//                // Setting a custom smallIcon included in the Drawable folder
+//                builder.setSmallIcon(R.drawable.atest);
+//
+//                // Setting a custom largeIcon included in the Drawable folder
+//                Bitmap largeIcon = BitmapFactory.decodeResource(getResources(), R.drawable.androidorange);
+//                builder.setLargeIcon(largeIcon);
+//
+//                // Setting a custom Big Picture included in the Drawable folder, beneath the notification
+//                Bitmap androidBanner = BitmapFactory.decodeResource(getResources(), R.drawable.androidappsdev);
+//                builder.setStyle(new NotificationCompat.BigPictureStyle().bigPicture(androidBanner));
+//            }
+//        });
 
         // Parsing for Variable to be registered in Leanplum Dashboard
         // This has to be done BEFORE starting Leanplum
         // Variables are defined in this case into LPvariables class
         Parser.parseVariables(this);
-        Parser.parseVariablesForClasses(LPvariables.class, MainActivity.class);
-
-
-        // Place here DeviceID code :
-
-        // Starting MParticle - this will also start Leanplum
-//        MParticle.start(this, MParticle.InstallType.AutoDetect, MParticle.Environment.Production);
-
-
-        Leanplum.addVariablesChangedHandler(new VariablesChangedCallback() {
-            @Override
-            public void variablesChanged() {
-                if (StartupScreen == 0){
-                    Log.i("### ", "variable retrieved");
-                }
-
-                else {
-                    // show something
-                }
-            }
-        });
+        Parser.parseVariablesForClasses(LPvariables.class);
 
         Leanplum.addStartResponseHandler(new StartCallback() {
             @Override
@@ -96,10 +64,11 @@ public class ApplicationClass extends Application {
             }
         });
 
+        // Starting MParticle - this will also start Leanplum
+//        MParticle.start(this, MParticle.InstallType.AutoDetect, MParticle.Environment.Production);
 
-        MParticle.start(this, MParticle.InstallType.AutoDetect, MParticle.Environment.Production);
-//        MParticle.start(this);
-
+//        MParticle.start(this, MParticle.InstallType.AutoDetect, MParticle.Environment.Production);
+        MParticle.start(this);
 
     }
 }

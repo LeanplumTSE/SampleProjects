@@ -62,5 +62,17 @@
         android:layout_toRightOf="@+id/loginField"
         android:id="@+id/imageView" />
 
+    <Button
+        android:text="Win2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loginField"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="37dp"
+        android:layout_marginEnd="37dp"
+        android:id="@+id/button6"
+        android:onClick="openWindow2activity"/>
+
 
 </RelativeLayout>

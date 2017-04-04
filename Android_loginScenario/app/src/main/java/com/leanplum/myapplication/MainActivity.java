@@ -37,6 +37,11 @@ public class MainActivity extends LeanplumAppCompatActivity {
 
     };
 
+    public void openWindow2activity(View view){
+        Intent intent = new Intent(MainActivity.this, Window2.class);
+        startActivity(intent);
+    }
+
     public void setEvents(View view){
         Leanplum.track("Event1_LoggedOut");
     }
@@ -56,13 +61,13 @@ public class MainActivity extends LeanplumAppCompatActivity {
 
 
         // Setting snoopy image
-        Leanplum.addVariablesChangedAndNoDownloadsPendingHandler(new VariablesChangedCallback() {
-            @Override
-            public void variablesChanged() {
-                final ImageView imageView = (ImageView) findViewById(R.id.imageView);
-                imageView.setImageBitmap(BitmapFactory.decodeStream(LPvariables.snoopy.stream()));
-            }
-        });
+//        Leanplum.addVariablesChangedAndNoDownloadsPendingHandler(new VariablesChangedCallback() {
+//            @Override
+//            public void variablesChanged() {
+//                final ImageView imageView = (ImageView) findViewById(R.id.imageView);
+//                imageView.setImageBitmap(BitmapFactory.decodeStream(LPvariables.snoopy.stream()));
+//            }
+//        });
 
 
         Leanplum.track("SplashScreenClosed");

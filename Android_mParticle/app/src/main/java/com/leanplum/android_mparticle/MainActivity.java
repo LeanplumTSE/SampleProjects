@@ -56,15 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
         // setting UserAttributes
         MParticle.getInstance().setUserAttribute("name", "federico");
-        MParticle.getInstance().setUserAttribute("email", "fede@gmail.com");
-
-
-        //associate a list of values with an attribute key
-        List<String> attributeList = new ArrayList<>();
-        attributeList.add("Apple");
-        attributeList.add("Orange");
-        attributeList.add("Peach");
-        MParticle.getInstance().setUserAttributeList("Favorite Fruits", attributeList);
+        MParticle.getInstance().setUserAttribute("email", "support@leanplum.com");
 
 
         // Ignore the following test
@@ -121,11 +113,9 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-
         Leanplum.addStartResponseHandler(new StartCallback() {
             @Override
             public void onResponse(boolean b) {
-
                 Log.i("### ", "Leanplum started");
 
                 // Loggin an event using Leanplum - you should see this event tracked in Leanplum

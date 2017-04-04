@@ -36,6 +36,8 @@
 
         <activity android:name=".MainActivity"/>
         <activity android:name=".LoginWindow"/>
+        <activity android:name=".Window2"/>
+        <activity android:name=".Window3"/>
 
         <activity
             android:name=".GizmosActivity"

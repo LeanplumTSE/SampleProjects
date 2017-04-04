@@ -15,24 +15,24 @@ import com.leanplum.callbacks.VariablesChangedCallback;
 
 public class Splashcreen extends AppCompatActivity {
 
-    Thread background = new Thread() {
-        public void run() {
-
-            try {
-                // Thread will sleep for 5 seconds
-                sleep(5 * 1000);
-
-                Log.i("### ", "time passed");
-
-                Intent intent = new Intent(Splashcreen.this, MainActivity.class);
-                startActivity(intent);
-                finish();
-
-            } catch (Exception e) {
-
-            }
-        }
-    };
+//    Thread background = new Thread() {
+//        public void run() {
+//
+//            try {
+//                // Thread will sleep for 5 seconds
+//                sleep(5 * 1000);
+//
+//                Log.i("### ", "time passed");
+//
+//                Intent intent = new Intent(Splashcreen.this, MainActivity.class);
+//                startActivity(intent);
+//                finish();
+//
+//            } catch (Exception e) {
+//
+//            }
+//        }
+//    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
