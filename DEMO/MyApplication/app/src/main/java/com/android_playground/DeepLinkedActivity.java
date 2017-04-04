@@ -3,6 +3,7 @@ package com.android_playground;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
+import com.leanplum.Leanplum;
 import com.leanplum.LeanplumPushListenerService;
 
 /**
@@ -16,5 +17,7 @@ public class DeepLinkedActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_deeplinked);
+
+        Leanplum.track("DeepLinked activity");
     }
 }

@@ -21,23 +21,26 @@ public class SplashscreenActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        Leanplum.track("splashstart");
+
         Leanplum.addStartResponseHandler(new StartCallback() {
             @Override
             public void onResponse(boolean b) {
-                Log.i("### ", "Splashscreen  - Leanplum has started and All variables changed");
+                Log.i("### ", "Splashscreen  - Leanplum has started and variables are retrieved");
 
-                long endStartTime = System.nanoTime();
-
-                long elapsedStartNanos = endStartTime - startTime;
-                long elapsedStartMS = elapsedStartNanos / 1000000;
-                long elapsedStartMSRoundedTo30 = (elapsedStartMS / 30) * 30;
-                Log.i("#### ", "Leanplum started");
-
-                String waitTimeString = String.valueOf(elapsedStartMSRoundedTo30);
-                Log.i("### ", "Leanplum start Time: " + waitTimeString);
+//                long endStartTime = System.nanoTime();
+//
+//                long elapsedStartNanos = endStartTime - startTime;
+//                long elapsedStartMS = elapsedStartNanos / 1000000;
+//                long elapsedStartMSRoundedTo30 = (elapsedStartMS / 30) * 30;
+//                Log.i("#### ", "Leanplum started");
+//
+//                String waitTimeString = String.valueOf(elapsedStartMSRoundedTo30);
+//                Log.i("### ", "Leanplum start Time: " + waitTimeString);
 
                 Intent intent = new Intent(SplashscreenActivity.this, MainActivity.class);
                 startActivity(intent);
+
                 finish();
             }
         });

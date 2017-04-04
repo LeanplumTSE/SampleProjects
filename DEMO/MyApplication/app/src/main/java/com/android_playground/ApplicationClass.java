@@ -1,12 +1,18 @@
 package com.android_playground;
 
 import android.app.Application;
+import android.util.Log;
+
+import com.android.dx.command.Main;
 import com.leanplum.Leanplum;
 import com.leanplum.LeanplumActivityHelper;
+import com.leanplum.LeanplumApplication;
 import com.leanplum.LeanplumPushService;
 import com.leanplum.annotations.Parser;
 import com.leanplum.callbacks.StartCallback;
 import com.leanplum.callbacks.VariablesChangedCallback;
+
+import java.security.Provider;
 
 import static com.android_playground.Credentials.AppID;
 import static com.android_playground.Credentials.DevKey;
@@ -23,9 +29,9 @@ public class ApplicationClass extends Application {
         Leanplum.setApplicationContext(this);
         LeanplumActivityHelper.enableLifecycleCallbacks(this);
 
-        LeanplumActivityHelper.deferMessagesForActivities(SplashscreenActivity.class, MainActivity.class);
+        LeanplumActivityHelper.deferMessagesForActivities(SplashscreenActivity.class);
 
-        Parser.parseVariablesForClasses(GlobalVariables.class);
+        Parser.parseVariablesForClasses(GlobalVariables.class, MainActivity.class);
 
 
         if (BuildConfig.DEBUG) {
@@ -56,7 +62,7 @@ public class ApplicationClass extends Application {
 
 
         // Firebase!
-//        LeanplumPushService.enableFirebase();
+        LeanplumPushService.enableFirebase();
 
         Leanplum.start(this);
     }

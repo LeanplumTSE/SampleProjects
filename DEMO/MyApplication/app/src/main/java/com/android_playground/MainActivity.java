@@ -1,8 +1,6 @@
 package com.android_playground;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.pm.ApplicationInfo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -12,16 +10,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import com.google.android.gms.gcm.GoogleCloudMessaging;
-import com.google.android.gms.iid.InstanceID;
 import com.leanplum.Leanplum;
-import com.leanplum.LeanplumPushRegistrationService;
-import com.leanplum.LeanplumPushService;
+import com.leanplum.annotations.Variable;
 import com.leanplum.callbacks.VariablesChangedCallback;
-
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -31,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     String token;
     Map<String, Object> loggedoutAttribute = new HashMap<String, Object>();
+    Map<String, Object> orderAttribute = new HashMap<String, Object>();
 
     public static EditText mEdit;
 
@@ -63,9 +55,18 @@ public class MainActivity extends AppCompatActivity {
 //        attributes.put("email", "federico@leanplum.com");
 //        Leanplum.setUserAttributes(attributes);
 
-        Leanplum.track("triggerWebhook");
+        Log.i("### Leanplum", "Tracking 'Home' event");
+        Leanplum.track("Home");
 
 //        Leanplum.forceContentUpdate();
+    }
+
+
+    @Variable(group = "balanceShield.about", name = "subhead")
+    public static String shieldAboutSubheadText = "Turn on Balance Shield, and we’ll automatically Cash Out up to $%1$s when your bank balance is feeling low. That means, if you’ve added earnings, there’s no more worrying about overdraft fees from small purchases.";
+
+    public String getShieldAboutSubheadText() {
+        return shieldAboutSubheadText;
     }
 
 
@@ -73,9 +74,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
         Log.i("### ", String.valueOf(Leanplum.variants()));
 
         loggedoutAttribute.put("isLoggedIn:", false);
+
+//        Leanplum.track("splashstart");
 
 
         setContentView(R.layout.activity_main);
@@ -85,16 +89,20 @@ public class MainActivity extends AppCompatActivity {
         // Setting welcome Text from Leanplum
         // I'm not putting this code inside a Callback since I'm closing the Splashscreen when Leanplum start callback is triggered
 
-
-
         Leanplum.addVariablesChangedHandler(new VariablesChangedCallback() {
-            @Override
-            public void variablesChanged() {
-                TextView welcomeText = (TextView) findViewById(R.id.welcomeString);
-                welcomeText.setText(GlobalVariables.welcomeString);
-            }
-        });
+                                                @Override
+                                                public void variablesChanged() {
+                                                    Log.i("### ", getShieldAboutSubheadText());
 
+                                                    String firstLineString = getShieldAboutSubheadText();
+
+                                                    String secondLineString = String.format(getShieldAboutSubheadText(),
+                                                            "100"
+                                                    );
+                                                }
+                                            });
+
+        Leanplum.track("MainActivity open");
     }
 
     @Override
@@ -124,5 +132,16 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void changeOrderUA(View view) {
+        orderAttribute.put("Order", "newOrder+" + System.currentTimeMillis());
+        Log.i("### Leanplum", "Setting " + orderAttribute.toString());
+        Leanplum.setUserAttributes(orderAttribute);
+    }
+
+    public void trackRated(View view) {
+        Log.i("### Leanplum", "Tracking 'Rated' event");
+        Leanplum.track("Rated");
     }
 }

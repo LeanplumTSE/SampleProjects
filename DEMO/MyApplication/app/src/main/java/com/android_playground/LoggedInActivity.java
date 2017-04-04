@@ -29,6 +29,8 @@ public class LoggedInActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loggedin);
 
+        Leanplum.track("loggedin");
+
         loginAttribute.put("isLoggedIn:", true);
         Leanplum.setUserAttributes(loginAttribute);
 
