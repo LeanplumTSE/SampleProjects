@@ -1,0 +1,6 @@
+framework module Pods_iOS_LP_mParticle {
+  umbrella header "Pods-iOS_LP-mParticle-umbrella.h"
+
+  export *
+  module * { export * }
+}
