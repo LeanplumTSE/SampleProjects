@@ -23,7 +23,7 @@
     
     
 
-    NSString *const SEGMENT_WRITE_KEY = @"S5TcxKfDBYMECt2ScakSCZ3nxZPZv86L";
+    NSString *const SEGMENT_WRITE_KEY = @"YOUR_SEGMENT_KEY";
     SEGAnalyticsConfiguration *config = [SEGAnalyticsConfiguration configurationWithWriteKey:SEGMENT_WRITE_KEY];
     [config use:[SEGLeanplumIntegrationFactory instance]];
     [SEGAnalytics setupWithConfiguration:config];
