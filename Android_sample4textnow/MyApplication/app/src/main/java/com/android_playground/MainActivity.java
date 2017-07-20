@@ -1,10 +1,13 @@
 package com.android_playground;
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -27,33 +30,33 @@ public class MainActivity extends AppCompatActivity {
         return mEdit;
     }
 
-    @Override
-    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
-
-        Log.i("### ", "Permission requested");
-
-        switch (requestCode) {
-            case 1: {
-                // If request is cancelled, the result arrays are empty.
-                if (grantResults.length > 0
-                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-
-                    // permission was granted, yay! Do the
-                    // contacts-related task you need to do.
-                } else {
-
-                    Log.i("###", "Permission denied");
-                    // permission denied, boo! Disable the
-                    // functionality that depends on this permission.
-//                    Toast.makeText(MainActivity.this, "Permission denied to read your External storage", Toast.LENGTH_SHORT).show();
-                }
-                return;
-            }
-
-            // other 'case' lines to check for other
-            // permissions this app might request
-        }
-    }
+//    @Override
+//    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+//
+//        Log.i("### ", "Permission requested");
+//
+//        switch (requestCode) {
+//            case 1: {
+//                // If request is cancelled, the result arrays are empty.
+//                if (grantResults.length > 0
+//                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+//
+//                    // permission was granted, yay! Do the
+//                    // contacts-related task you need to do.
+//                } else {
+//
+//                    Log.i("###", "Permission denied");
+//                    // permission denied, boo! Disable the
+//                    // functionality that depends on this permission.
+////                    Toast.makeText(MainActivity.this, "Permission denied to read your External storage", Toast.LENGTH_SHORT).show();
+//                }
+//                return;
+//            }
+//
+//            // other 'case' lines to check for other
+//            // permissions this app might request
+//        }
+//    }
 
 
     public void login(View view) {
@@ -66,10 +69,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void doSomething(View view) {
-
-        ActivityCompat.requestPermissions(MainActivity.this,
-                new String[]{READ_CONTACTS},
-                1);
+        Intent intent = new Intent(this, DialNumber.class);
+        startActivity(intent);
+//
     }
 
 

@@ -30,7 +30,6 @@ public class ApplicationClass extends Application {
             Leanplum.setAppIdForProductionMode(AppID, ProdKey);
         }
 
-
         Leanplum.trackAllAppScreens();
 
         Leanplum.start(this);

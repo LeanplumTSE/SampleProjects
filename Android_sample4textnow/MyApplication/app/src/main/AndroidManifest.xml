@@ -51,6 +51,7 @@
         </activity>
 
         <activity android:name=".LoggedInActivity"/>
+        <activity android:name=".DialNumber"/>
 
     </application>
 
