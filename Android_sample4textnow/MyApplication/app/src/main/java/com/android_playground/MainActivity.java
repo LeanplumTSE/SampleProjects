@@ -70,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void doSomething(View view) {
         Intent intent = new Intent(this, DialNumber.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
         startActivity(intent);
 //
     }
