@@ -33,18 +33,9 @@ public class ApplicationClass extends Application {
         Parser.parseVariables(this);
         Parser.parseVariablesForClasses(LPvariables.class);
 
-        Leanplum.setDeviceId("fedePippo");
-
-//        LeanplumPushService.enableFirebase();
-
-//        LeanplumPushService.setGcmSenderId("537826669266");
-
         // Starting mParticle and Leanplum in Development mode
         MParticle.start(this, MParticle.InstallType.AutoDetect, MParticle.Environment.Development);
 
         MParticle.getInstance().Messaging().enablePushNotifications("537826669266");
-
-        // mParticle keys are stored in res/values/string.xml
-//        MParticle.start(this);
     }
 }
