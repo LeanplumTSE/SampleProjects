@@ -1,12 +1,11 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.3"
+    compileSdkVersion 26
     defaultConfig {
         applicationId "com.leanplum.android_mparticle"
-        minSdkVersion 21
-        targetSdkVersion 23
+        minSdkVersion 15
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -24,11 +23,17 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:appcompat-v7:26.1.0'
     testCompile 'junit:junit:4.12'
-    compile 'com.mparticle:android-leanplum-kit:+'
-    compile 'com.mparticle:android-core:+'
-    compile 'com.google.android.gms:play-services-ads:9.0.0'
-    compile 'com.google.android.gms:play-services-gcm:9.0.0'
-    compile 'com.google.android.gms:play-services-location:9.0.0'
+    compile 'com.mparticle:android-leanplum-kit:4+'
+    compile 'com.mparticle:android-core:4+'
+    compile 'com.google.android.gms:play-services-ads:11.6.0'
+    compile 'com.google.android.gms:play-services-gcm:11.6.0'
+    compile 'com.google.android.gms:play-services-location:11.6.0'
+//    compile 'com.google.firebase:firebase-messaging:11.6.0'}
 }
+
+// <-- Start Leanplum Dependencies -->
+// Include for FCM.
+//apply plugin: 'com.google.gms.google-services'
+// <-- End Leanplum Dependencies -->

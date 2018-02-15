@@ -1,6 +1,0 @@
-framework module mParticle_Leanplum {
-  umbrella header "mParticle-Leanplum-umbrella.h"
-
-  export *
-  module * { export * }
-}

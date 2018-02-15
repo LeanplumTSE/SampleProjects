@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="/Users/fede/fromGit/Leanplum/Android/AndroidSDK/src/main/shaders"/></dataSet><dataSet config="debug"><source path="/Users/fede/fromGit/Leanplum/Android/AndroidSDK/build-types/debug/shaders"/></dataSet></merger>

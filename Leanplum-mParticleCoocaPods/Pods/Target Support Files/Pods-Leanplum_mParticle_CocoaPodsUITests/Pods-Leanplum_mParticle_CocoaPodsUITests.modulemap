@@ -1,6 +1,0 @@
-framework module Pods_Leanplum_mParticle_CocoaPodsUITests {
-  umbrella header "Pods-Leanplum_mParticle_CocoaPodsUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}

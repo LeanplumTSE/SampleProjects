@@ -1,5 +1,6 @@
 package com.leanplum.android_mparticle;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -22,15 +23,16 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import static com.mparticle.MParticle.IdentityType.CustomerId;
+
 public class MainActivity extends AppCompatActivity {
 
     public static EditText mEdit;
     public static String userID;
 
-    // Ignore the following
-//    public static Map<String, Object> LeanplumAttributes = new HashMap<String, Object>();
-//    public static List<Object> products = new ArrayList<Object>();
 
+    // Event parameters Map object for mParticle
+    public static Map<String, String> eventInfo = new HashMap<String, String>(2);
 
     // creating a product for the Purchase event
     Product product = new Product.Builder("Foo name", "Foo sku", 100.00)
@@ -44,37 +46,39 @@ public class MainActivity extends AppCompatActivity {
             .setShipping(20.00);
 
 
-    public void setUserID(View view){
+    public void setUserID(View view) {
         mEdit = (EditText) findViewById(R.id.loginField);
         userID = mEdit.getText().toString();
-        Leanplum.setUserId(userID);
+//        Leanplum.setUserId(userID);
+
+// Associate an internal customer ID with this user/device
+        MParticle.getInstance().setUserIdentity(userID, CustomerId);
         Log.i("### ", "Leanplum setUserID with user: " + userID);
         userID = null;
+
+        final Intent intent = new Intent(getApplicationContext(), LoggedinActivity.class);
+
+        // Optional (depends on the App usage and use cases)
+        // Forcing the content update and making sure the data is synced, then opening the LoggedIn screen
+        Leanplum.forceContentUpdate(new VariablesChangedCallback() {
+            @Override
+            public void variablesChanged() {
+                startActivity(intent);
+            }
+        });
     }
 
-    public void setUserAttributes(View view){
+    public void setUserAttributes(View view) {
 
         // setting UserAttributes
         MParticle.getInstance().setUserAttribute("name", "federico");
         MParticle.getInstance().setUserAttribute("email", "support@leanplum.com");
-
-
-        // Ignore the following test
-        // Adding Leanplum UserAttributes as an Array
-//        products.add("paperino");
-//        products.add("pluto");
-//
-//        LeanplumAttributes.put("otherNames", products);
-//        Leanplum.setUserAttributes(LeanplumAttributes);
-//        products.clear();
-
     }
 
-    public void trackMPevent(View view){
+    public void trackMPevent(View view) {
         // Tracking a mParticle Custom Event passing parameters
         eventInfo.put("spice", "hot");
         eventInfo.put("menu", "weekdays");
-        eventInfo.put("numberParam", "123456");
         MPEvent event = new MPEvent.Builder("Food Order", MParticle.EventType.Transaction)
                 .duration(100)
                 .info(eventInfo)
@@ -90,13 +94,6 @@ public class MainActivity extends AppCompatActivity {
                 .build();
         mp.logEvent(commercEvent);
     }
-
-    // Event parameters for mParticle
-    Map<String, String> eventInfo = new HashMap<String, String>(2);
-
-    // Event paramters for Leanplum
-    Map<String, Object> params = new HashMap<String, Object>();
-
 
 
     @Override
@@ -118,13 +115,9 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(boolean b) {
                 Log.i("### ", "Leanplum started");
 
-                // Loggin an event using Leanplum - you should see this event tracked in Leanplum
-                params.put("post", 12345);
-                Leanplum.track("Leanplum started", params);
-
                 // Tracking events using MParticle - you should also see those events tracked in Leanplum
-//                MParticle.getInstance().logEvent("Mparticle tracked event - other", MParticle.EventType.Other);
-//                MParticle.getInstance().logEvent("Mparticle tracked event - location", MParticle.EventType.Location);
+                MParticle.getInstance().logEvent("Mparticle tracked event - other", MParticle.EventType.Other);
+                MParticle.getInstance().logEvent("Mparticle tracked event - location", MParticle.EventType.Location);
             }
         });
     }

@@ -1,12 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.leanplum.android_mparticle">
+    package="com.leanplum.android_mparticle" xmlns:tools="http://schemas.android.com/tools">
+
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        tools:overrideLibrary="com.leanplum, com.google.android.gms"/>
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.INTERNET"/>
 
-    <permission android:name="com.leanplum.android_mparticle.permission.C2D_MESSAGE" android:protectionLevel="signature" />
-    <uses-permission android:name="com.leanplum.android_mparticle.permission.C2D_MESSAGE" />
+    <!-- GCM requires a Google account (necessary only if if the device is running a version lower than Android 4.0.4). -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+
+    <!-- Optional. Prevents the device from sleeping when a message is received. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+    <!-- These permissions are required only for geofencing. -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
 
     <application
         android:allowBackup="true"
@@ -16,53 +29,39 @@
         android:theme="@style/AppTheme"
         android:name=".ApplicationClass">
 
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+
         <receiver android:name="com.mparticle.ReferrerReceiver" android:exported="true">
             <intent-filter>
                 <action android:name="com.android.vending.INSTALL_REFERRER"/>
             </intent-filter>
         </receiver>
 
-        <receiver
-            android:name="com.google.android.gms.gcm.GcmReceiver"
-            android:exported="true"
-            android:permission="com.google.android.c2dm.permission.SEND">
-            <intent-filter>
-                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
-                <category android:name="com.leanplum.android_mparticle" />
-            </intent-filter>
-        </receiver>
-
-        <receiver
-            android:name="com.leanplum.LeanplumPushReceiver"
-            android:exported="false" >
-            <intent-filter>
-                <action android:name="com.leanplum.LeanplumPushListenerService" />
-            </intent-filter>
-        </receiver>
-
         <service
-            android:name="com.leanplum.LeanplumPushListenerService"
-            android:exported="false" >
-            <intent-filter>
-                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-            </intent-filter>
-        </service>
-
-        <service android:name="com.leanplum.LeanplumLocalPushListenerService" />
-
-        <service android:name="com.leanplum.LeanplumPushRegistrationService" />
-
-        <service
-            android:name="com.leanplum.LeanplumPushInstanceIDService"
+            android:name=".Custom_PushListener"
             android:exported="false">
             <intent-filter>
-                <action android:name="com.google.android.gms.iid.InstanceID" />
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
             </intent-filter>
         </service>
 
-        <!-- For geofencing only -->
-        <service android:name="com.leanplum.ReceiveTransitionsIntentService" />
+        <service android:name="com.mparticle.MPService"/>
+
+        <!--<service android:name="com.mparticle.messaging.InstanceIdService" />-->
+
+
+        <!--<receiver-->
+            <!--android:name="com.mparticle.MPReceiver"-->
+            <!--android:permission="com.google.android.c2dm.permission.SEND">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="com.google.android.c2dm.intent.RECEIVE"/>-->
+                <!--<category android:name="${applicationId}"/>-->
+            <!--</intent-filter>-->
+        <!--</receiver>-->
+
 
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -71,6 +70,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+
+        <activity android:name=".LoggedinActivity"/>
+
     </application>
 
 </manifest>

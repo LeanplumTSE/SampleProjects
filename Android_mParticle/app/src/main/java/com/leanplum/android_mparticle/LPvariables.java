@@ -13,4 +13,5 @@ public class LPvariables {
 
     @Variable
     public static int LPint = 42;
+
 }
