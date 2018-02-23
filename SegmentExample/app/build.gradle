@@ -1,0 +1,58 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
+
+    defaultConfig {
+        applicationId "com.leanplum.segmentexample"
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+//    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    //noinspection GradleCompatible
+    compile 'com.android.support:appcompat-v7:26.1.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:design:26.1.0'
+//    compile 'com.leanplum.segment:LeanplumIntegration:+'
+//    compile 'com.segment.analytics.android:analytics:4.+'
+//    compile 'com.google.android.gms:play-services-gcm:11.8+'
+    compile 'com.google.android.gms:play-services-location:11.8+'
+
+    compile 'com.segment.analytics.android:analytics:4+'
+//    compile 'com.leanplum:leanplum-gcm:+'
+//    compile 'com.leanplum:leanplum-fcm:+'
+    compile 'com.leanplum:Leanplum:3.+'
+
+    compile('com.leanplum.segment:LeanplumIntegration:1.1.0') {
+        exclude group: 'com.segment.analytics.android', module: 'analytics'
+        exclude group: 'com.leanplum', module: 'Leanplum'
+    }
+
+
+
+    // Option 2: Firebase Cloud Messaging
+    // Minimum supported version is 10.0.1+.
+    compile 'com.google.firebase:firebase-messaging:11.8+'
+    // Only needed if you plan to use Location.
+}
+
+apply plugin: 'com.google.gms.google-services'
